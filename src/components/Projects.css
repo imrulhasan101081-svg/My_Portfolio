@@ -1,0 +1,113 @@
+.projects-sec {
+  padding-top: 5rem;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.proj-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+  border-top: 1px solid var(--border-light);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.proj-list .proj-row:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.proj-row:hover {
+  background: rgba(255, 255, 255, 0.015);
+  padding-left: 1.5rem;
+  border-top-color: var(--accent);
+}
+
+.proj-cat {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.4s ease;
+}
+
+.proj-row:hover .proj-cat {
+  color: var(--accent);
+}
+
+.proj-title-lux {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  transition: transform 0.4s ease;
+}
+
+.proj-desc-lux {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Floating Preview Card */
+.floating-preview-card {
+  position: fixed;
+  width: 280px;
+  height: 350px;
+  border-radius: 6px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border-light);
+  background: var(--bg-card);
+}
+
+.preview-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.preview-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  filter: grayscale(10%) contrast(1.05);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.1);
+}
+
+.preview-img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 900px) {
+  .proj-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 3rem 0;
+  }
+  
+  .floating-preview-card {
+    display: none !important; /* Disable on tablet/mobile */
+  }
+}

@@ -1,0 +1,82 @@
+.edu-sec {
+  padding-top: 6rem;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-item {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-light);
+  transition: all 0.4s ease;
+}
+
+.edu-list .edu-item:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.edu-item:hover {
+  background: rgba(255, 255, 255, 0.01);
+  padding-left: 1rem;
+}
+
+.edu-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-muted);
+  min-width: 120px;
+}
+
+.edu-details h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.edu-inst-name {
+  color: var(--text-muted);
+  font-weight: 300;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+}
+
+.edu-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 4px;
+}
+
+.edu-desc-text {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 450px;
+}

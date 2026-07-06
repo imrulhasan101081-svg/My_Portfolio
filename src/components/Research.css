@@ -1,0 +1,230 @@
+.research-sec {
+  padding-top: 5rem;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6rem;
+}
+
+@media (max-width: 900px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.research-proj-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.thesis-defenses {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.thesis-defenses span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--border-light);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+}
+
+.lux-body {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 600px;
+}
+
+.lux-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.lux-tags span {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+}
+
+.research-links {
+  margin-top: 3rem;
+}
+
+.research-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.lux-phase {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.lux-phase-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  font-style: italic;
+  min-width: 40px;
+}
+
+.lux-phase-content h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.lux-phase-content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Invitations grid styling */
+.invitations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .invitations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.invite-card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  transition: all 0.4s ease;
+}
+
+.invite-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(207, 166, 112, 0.08);
+}
+
+.invite-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.invite-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  background: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.invite-loc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.invite-title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.invite-detail {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Publications */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-light);
+  transition: opacity 0.3s ease;
+}
+
+.pub-list .pub-row:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pub-row:hover {
+  opacity: 0.7;
+}
+
+.pub-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.pub-info h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.pub-info span {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pub-action {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .pub-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

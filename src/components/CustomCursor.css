@@ -1,0 +1,53 @@
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-cursor.hover {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  mix-blend-mode: normal;
+}
+
+.custom-cursor.view {
+  width: 64px;
+  height: 64px;
+  background-color: var(--accent);
+  mix-blend-mode: normal;
+  border-radius: 50%;
+}
+
+.cursor-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-color);
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards 0.1s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
